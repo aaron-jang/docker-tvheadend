@@ -166,7 +166,8 @@ RUN \
 	--localstatedir=/var \
 	--mandir=/usr/share/man \
 	--prefix=/usr \
-	--sysconfdir=/config && \
+	--sysconfdir=/config
+RUN \
  make && \
  make install && \
  echo "**** build XMLTV ****" && \
