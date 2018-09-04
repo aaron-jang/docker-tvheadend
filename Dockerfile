@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:3.7
+FROM arm32v6/alpine:3.7
 
 # set version label
 ARG BUILD_DATE
@@ -141,8 +141,8 @@ RUN \
 	gnu-libiconv && \
  apk add --no-cache \
 	--repository http://nl.alpinelinux.org/alpine/edge/main \
-	libva \
-	libva-intel-driver && \
+	libva && \
+#	libva-intel-driver && \
  echo "**** install perl modules for xmltv ****" && \
  curl -L http://cpanmin.us | perl - App::cpanminus && \
  cpanm --installdeps /tmp/patches && \
